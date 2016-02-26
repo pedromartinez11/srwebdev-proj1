@@ -9,14 +9,11 @@ var jasmine = require('gulp-jasmine-phantom');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
-var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
-
 gulp.task('default', ['copy-html', 'copy-images', 'styles', 'lint', 'scripts'], function() {
     gulp.watch('scss/**/*.scss', ['styles']);
     gulp.watch('js/**/*.js', ['lint']);
     gulp.watch('/index.html', ['copy-html']);
-    gulp.watch('./dist/index.html').on('change', browserSync.reload);
+    gulp.watch(['./dist/index.html', './dist/js/all.js']).on('change', browserSync.reload);
 
     browserSync.init({
         server: './dist'

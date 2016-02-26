@@ -5,35 +5,55 @@
 </head>
 <body>
 
-<h2>
-    Create Account
-</h2>
-<form action="" autocomplete="on" name="signUpForm" id="signUpForm">
-    <label for="fname">
-        <span class="input_label">Name:</span>
-        <input class="input_value" type="text" id="fname" name="name" autocomplete="given-name"/>
-    </label>
-    <label for="email">
-        <span class="input_label">Email:</span>
-        <input class="input_value" type="text" id="email" name="email" autocomplete="email"/>
-    </label>
-    <label for="password">
-        <span class="input_label">Password:</span>
-        <input class="input_value" type="password" id="password" name="password" autocomplete="off"/>
-    </label>
-    <label for="verify-password">
-        <span class="input_label">Password (verify):</span>
-        <input class="input_value" type="password" id="verify-password" name="verify-password" autocomplete="off"/>
-    </label>
-    <label for="title">
-        <span class="input_label">Title:</span>
-        <input class="input_value" type="text" id="title" name="title" autocomplete="organization-title"/>
-    </label>
+<div class="linksBox">
+    <a data-link-type="createAccount" href="javascript:void(0);">Create Account</a>
+    <a data-link-type="signIn" href="javascript:void(0);">Sign in</a>
+    <a data-link-type="createEvent" href="javascript:void(0);">Create Event</a>
+</div>
 
-    <input type="submit" value="Submit" />
+<div class="pageContent createAccount hidden">
+    <h2><span class="pageTitle">Create Account</span></h2>
+    <form action="" autocomplete="on" name="signUpForm" id="signUpForm">
+        <label for="fname">
+            <span class="input_label">Name:</span>
+            <input class="input_value" type="text" id="fname" name="name" autocomplete="given-name"/>
+        </label>
+        <label for="email">
+            <span class="input_label">Email:</span>
+            <input class="input_value" type="text" id="email" name="email" autocomplete="email"/>
+        </label>
+        <label for="password">
+            <span class="input_label">Password:</span>
+            <input class="input_value" type="password" id="password" name="password" autocomplete="off"/>
+        </label>
+        <label for="verify-password">
+            <span class="input_label">Password (verify):</span>
+            <input class="input_value" type="password" id="verify-password" name="verify-password" autocomplete="off"/>
+        </label>
+        <label for="title">
+            <span class="input_label">Title:</span>
+            <input class="input_value" type="text" id="title" name="title" autocomplete="organization-title"/>
+        </label>
 
-    <script type="application/javascript" src="js/all.js"></script>
-</form>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
 
+<div class="pageContent signIn hidden">
+    <h2><span class="pageTitle">Sign in</span></h2>
+    sign in stuff here..
+</div>
+
+<div class="pageContent createEvent hidden">
+    <h2><span class="pageTitle">Create Event</span></h2>
+    create event stuff here
+</div>
+
+<div class="bottomBar">
+    <a href="javascript:void(0);" class="backBtn hidden">Back</a>
+</div>
+
+
+<script type="application/javascript" src="js/all.js"></script>
 </body>
 </html>

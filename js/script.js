@@ -1,4 +1,22 @@
 (function () {
+    $('.linksBox').on('click', 'a', function (ev) {
+        console.log('clicked on a link');
+        var linkType = $(ev.currentTarget).data('linkType');
+
+        // hide the link menu
+        $('.linksBox').hide();
+
+        // show the appropriate view
+        $('.pageContent.' + linkType).show();
+        $('.backBtn').show();
+    });
+
+    $('.backBtn').on('click', function() {
+        $('.linksBox').show();
+        $('.pageContent').hide();
+        $('.backBtn').hide();
+    });
+
     console.log('script.js hello!');
 
     var getValues = function($form) {
